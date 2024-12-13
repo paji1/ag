@@ -59,30 +59,44 @@ const Header = () => {
                 } `}
               >
                 
-                <Image
-                  src="/images/logo/logo-2.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
+                
                 {
                   ((theme === "light"  && usePathName === "/" && !sticky) || !theme || !usePathName) ? 
-                    
+                    <>
                     <Image
                     src="/images/logo/logo-2.svg"
                     alt="logo"
                     width={140}
                     height={30}
-                    className=" w-full hidden"
+                    className=" w-full hidden "
                     />
-                  : <Image
+                    <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="w-full hidden"
-                />
+                  className="w-full  "
+                  />
+                    
+                  </>
+                  :
+                  <>
+                  <Image
+                    src="/images/logo/logo-2.svg"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className=" w-full block dark:hidden"
+                    />
+                   <Image
+                  src="/images/logo/logo.svg"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                  className="w-full hidden dark:block "
+                  />
+                  </>
+      
                 }
               </Link>
             </div>

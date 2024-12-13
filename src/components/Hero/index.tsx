@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HeroPic from  "/videos/intro.mp4"
 
 const Hero = () => {
   return (
