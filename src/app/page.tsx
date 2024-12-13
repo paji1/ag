@@ -33,4 +33,5 @@ export default function Home() {
       <Contact />
     </>
   );
+  
 }

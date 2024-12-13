@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   // Navbar toggle
@@ -38,6 +39,7 @@ const Header = () => {
 
   const usePathName = usePathname();
 
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <header
@@ -56,6 +58,7 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
+                
                 <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
@@ -63,13 +66,24 @@ const Header = () => {
                   height={30}
                   className="w-full dark:hidden"
                 />
-                <Image
+                {
+                  ((theme === "light"  && usePathName === "/" && !sticky) || !theme || !usePathName) ? 
+                    
+                    <Image
+                    src="/images/logo/logo-2.svg"
+                    alt="logo"
+                    width={140}
+                    height={30}
+                    className=" w-full hidden"
+                    />
+                  : <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="hidden w-full dark:block"
+                  className="w-full hidden"
                 />
+                }
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -112,17 +126,17 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                ? "text-white"
+                                : ((theme === "light"  && usePathName === "/" && !sticky) || !theme || !usePathName) ?" text-white/70 hover:text-white"  : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white" 
                             }`}
                           >
-                            {menuItem.title}
+                            {menuItem.title }
                           </Link>
                         ) : (
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className={`flex cursor-pointer items-center justify-between py-2 text-base ${((theme === "light"  && usePathName === "/" && !sticky) || !theme || !usePathName) ? "text-white/70"  : "text-dark"}  group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -145,7 +159,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  className={`block rounded py-2.5 text-sm  text-dark hover:text-primary dark:text-white/70 dark:hover:text-white  lg:px-3`}
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -161,7 +175,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                  className={`hidden px-7 py-3 text-base font-medium ${((theme === "light"  && usePathName === "/") || !theme || !usePathName) ? "text-white" : "text-dark"}  hover:opacity-70  dark:text-white md:block`}
                 >
                   Sign In
                 </Link>
