@@ -11,12 +11,13 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
 
 
     <>
-      <motion.div variants={{hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full" animate={{
+      <motion.div variants={{hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full " animate={{
         scale: [0.8,1],
+        translateY: [0, -30, 0],
         borderRadius: ["10%", "10%", "50%", "10%"]
       }}
       transition={{
-        duration: 4,
+        duration: 3,
         ease: "easeInOut",
         
       }}>
