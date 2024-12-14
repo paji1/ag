@@ -11,7 +11,11 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
 
 
     <>
-      <motion.div variants={{hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full">
+      <motion.div variants={{hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full" animate={{
+        scale: [0.7,1],
+        rotate: [0, 50, 50, 0],
+        borderRadius: ["10%", "10%", "50%", "10%"]
+      }}>
 
   
         <div className="wow fadeInUp" data-wow-delay=".15s">

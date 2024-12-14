@@ -1,6 +1,5 @@
 "use client";
 
-import { Parallax } from "@react-spring/parallax";
 import { ThemeProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
