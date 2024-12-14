@@ -191,7 +191,7 @@ const BlogSidebarPage = () => {
                           fill="url(#paint1_linear_111:606)"
                         />
                         <defs>
-                          <linearGradient
+                          {/* <linearGradient
                             id="paint0_linear_111:606"
                             x1="94.7523"
                             y1="82.0246"
@@ -205,8 +205,8 @@ const BlogSidebarPage = () => {
                               stopColor="white"
                               stopOpacity="0"
                             />
-                          </linearGradient>
-                          <linearGradient
+                          </linearGradient> */}
+                          {/* <linearGradient
                             id="paint1_linear_111:606"
                             x1="90.3206"
                             y1="58.4236"
@@ -220,7 +220,7 @@ const BlogSidebarPage = () => {
                               stopColor="white"
                               stopOpacity="0"
                             />
-                          </linearGradient>
+                          </linearGradient> */}
                         </defs>
                       </svg>
                     </span>
