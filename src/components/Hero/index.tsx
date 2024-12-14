@@ -5,9 +5,10 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+
+        className="sticky flex top-0  -z-50 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container">
+        <div className="container ">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
@@ -26,7 +27,7 @@ const Hero = () => {
                   </Link>
                   <Link
                     href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block  bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/30 rounded dark:text-white dark:hover:bg-white/5"
+                    className="inline-block px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 bg-white/30 rounded dark:text-white dark:hover:bg-white/5"
                   >
                     Contact Us
                   </Link>

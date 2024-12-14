@@ -175,7 +175,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 						Sign Up
 					</Link>
 					<div>
-						<ThemeToggler />
+						<ThemeToggler usePathName={usePathName} sticky={sticky} />
 					</div>
 				</div>
 			</div>

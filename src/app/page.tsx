@@ -23,7 +23,10 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
+
       <Hero />
+      
+      <div className="relative transition-all ease-in duration-100  bg-[#FCFCFC] dark:bg-black w-full">
       <Features />
       <Video />
       <Brands />
@@ -33,6 +36,7 @@ export default function Home() {
       <Pricing />
       <Blog />
       <Contact />
+      </div>
     </>
   );
   
