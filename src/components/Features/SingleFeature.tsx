@@ -8,14 +8,17 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
 
 
   return (
-
+    
 
     <>
-      <motion.div variants={{hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full " animate={{
+      <motion.div variants={ {hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full " animate={{
         scale: [0.8,1],
         translateY: [0, -30, 0],
-        borderRadius: ["10%", "10%", "50%", "10%"]
+        borderRadius: ["10%", "10%", "50%", "10%"],
       }}
+      initial="hidden"
+      whileInView="show" // Animation starts when in view
+      viewport={{ once: true, amount: 0.5 }} // Triggers only once,
       transition={{
         duration: 3,
         ease: "easeInOut",
@@ -34,7 +37,6 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
             {paragraph}
           </p>
         </div>
-   
         </motion.div>
     </>
 
