@@ -36,8 +36,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute w-full h-4 right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
-        <video  autoPlay loop muted className="w-full">
+        <div className="absolute w-full right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        <video  playsInline autoPlay loop muted className="w-full">
           <source className="fixed -z-1 h-fit"   src='/videos/intro.mp4' type="video/mp4"></source>
 
         </video>
