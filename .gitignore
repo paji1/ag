@@ -31,6 +31,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# todos
-xelora.todo
+# # todos
+# xelora.todo
 
