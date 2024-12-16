@@ -1,13 +1,16 @@
 'use client';
+import { useRef } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
-import { motion } from "motion/react"
+import { motion, useInView } from "motion/react"
 
 const Features = () => {
+  const sectionRef = useRef(null); // Reference to the section
+  const isInView = useInView(sectionRef, { once: false, margin: "-50% 0px" });
   return (
     <>
-      <div
+      <div ref={sectionRef}
         id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
@@ -19,8 +22,10 @@ const Features = () => {
           <motion.section variants={{
             hidden: {
               opacity: 0,
-
-
+              transition: {
+                duration: 3,
+                ease: "easeOut",
+              },
             },
             show: {
               opacity: 1,
@@ -29,8 +34,10 @@ const Features = () => {
               }
             }
           }}
+          
             initial="hidden"
-            animate="show" className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            animate={isInView ? "show" : "hidden"}
+             className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}

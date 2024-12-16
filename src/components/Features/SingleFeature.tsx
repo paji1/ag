@@ -1,31 +1,43 @@
 'use client';
 import { Feature } from "@/types/feature";
 import { useRef } from "react";
-import { motion } from "motion/react"
+import { motion, useInView } from "motion/react"
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph, id } = feature;
-
+  const sectionRef = useRef(null); // Reference to the section
+  const isInView = useInView(sectionRef, { once: false, margin: "-50% 0px" });
 
   return (
-    
 
-    <>
-      <motion.div variants={ {hidden: {opacity: 0}, show: {opacity: 1}}} className="w-full " animate={{
-        scale: [0.8,1],
-        translateY: [0, -30, 0],
-        borderRadius: ["10%", "10%", "50%", "10%"],
-      }}
-      initial="hidden"
-      whileInView="show" // Animation starts when in view
-      viewport={{ once: true, amount: 0.5 }} // Triggers only once,
-      transition={{
-        duration: 3,
-        ease: "easeInOut",
-        
-      }}>
 
-  
+    <div ref={sectionRef}>
+      <motion.div variants={{
+        hidden: { 
+          transition: {
+            duration: 3,
+            ease: "easeOut",
+          },
+          
+
+        }, show: {
+          opacity: 1, scale: [0.8, 1],
+          translateY: [0, -30, 0],
+          borderRadius: ["10%", "10%", "50%", "10%"],
+        },
+
+      }} className="w-full "
+        initial="hidden"
+        whileInView="show" // Animation starts when in view
+        viewport={{ once: true, amount: 0.5 }} // Triggers only once,
+        animate={isInView ? "show" : "hidden"}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+
+        }}>
+
+
         <div className="wow fadeInUp" data-wow-delay=".15s">
           <div className="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
             {icon}
@@ -37,8 +49,8 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
             {paragraph}
           </p>
         </div>
-        </motion.div>
-    </>
+      </motion.div>
+    </div>
 
   );
 };
