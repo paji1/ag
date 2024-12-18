@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 
 const ThemeToggler = (props) => {
   const { theme, setTheme } = useTheme();
-  
+
   return (
     <button aria-label='theme toggler'
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -19,6 +19,7 @@ const ThemeToggler = (props) => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+
         />
       </svg>
       <svg

@@ -52,7 +52,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 									className=" w-full hidden "
 								/>
 								<Image
-									src="/images/logo/logo.svg"
+									src="/images/logo/xelora.svg"
 									alt="logo"
 									width={140}
 									height={30}
@@ -70,7 +70,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 									className=" w-full block dark:hidden"
 								/>
 								<Image
-									src="/images/logo/logo.svg"
+									src="/images/logo/xelora.svg"
 									alt="logo"
 									width={140}
 									height={30}
