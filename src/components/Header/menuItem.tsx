@@ -45,7 +45,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 						((theme === "light" && usePathName === "/" && !sticky)) ?
 							<>
 								<Image
-									src="/images/logo/logo-2.svg"
+									src="/images/logo/xelora-2.svg"
 									alt="logo"
 									width={140}
 									height={30}
@@ -63,7 +63,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 							:
 							<>
 								<Image
-									src="/images/logo/logo-2.svg"
+									src="/images/logo/xelora-2.svg"
 									alt="logo"
 									width={140}
 									height={30}
