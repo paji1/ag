@@ -5,7 +5,7 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   title: "Xelora | Web Design & Development, SEO, and Marketing Experts",
   description: "Web Design & Development, SEO, and Marketing Experts",
   // other metadata
-  keywords: "web design, web development, SEO, marketing, digital marketing, branding",
-  authors: [{name: "Xelara", url: "https://www.xelora.tech"}],
+  keywords:
+    "web design, web development, SEO, marketing, digital marketing, branding",
+  authors: [{ name: "Xelara", url: "https://www.xelora.tech" }],
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
@@ -29,7 +30,6 @@ export const metadata: Metadata = {
     images: "https://www.xelora.tech/images/op-img.jpg",
   },
 
-  
   twitter: {
     card: "summary_large_image",
     site: "@xelora",
@@ -37,8 +37,6 @@ export const metadata: Metadata = {
     description: "Web Design & Development, SEO, and Marketing Experts",
     images: "https://www.xelorate.com/twitter-image.jpg",
   },
-
-  
 };
 
 export default function Home() {
@@ -47,19 +45,18 @@ export default function Home() {
       <ScrollUp />
 
       <Hero />
-      
-      <div className="relative transition-all ease-in duration-100  bg-[#FCFCFC] dark:bg-black w-full">
-      <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+
+      <div className="relative w-full bg-[#FCFCFC] transition-all  duration-100 ease-in dark:bg-black">
+        <Features />
+        <Video />
+        <Brands />
+        <AboutSectionOne />
+        <AboutSectionTwo />
+        <Testimonials />
+        <Pricing />
+        <Blog />
+        <Contact />
       </div>
     </>
   );
-  
 }
