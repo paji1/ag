@@ -14,9 +14,31 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Xelorate | Web Design & Development, SEO, and Marketing Experts",
+  title: "Xelora | Web Design & Development, SEO, and Marketing Experts",
   description: "Web Design & Development, SEO, and Marketing Experts",
   // other metadata
+  keywords: "web design, web development, SEO, marketing, digital marketing, branding",
+  authors: [{name: "Xelara", url: "https://www.xelora.tech"}],
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  openGraph: {
+    title: "Xelora | Web Design & Development, SEO, and Marketing Experts",
+    description: "Web Design & Development, SEO, and Marketing Experts",
+    type: "website",
+    url: "https://www.xelora.tech",
+    images: "https://www.xelora.tech/images/op-img.jpg",
+  },
+
+  
+  twitter: {
+    card: "summary_large_image",
+    site: "@xelora",
+    title: "Xelora | Web Design & Development, SEO, and Marketing Experts",
+    description: "Web Design & Development, SEO, and Marketing Experts",
+    images: "https://www.xelorate.com/twitter-image.jpg",
+  },
+
+  
 };
 
 export default function Home() {

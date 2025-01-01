@@ -20,7 +20,22 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      <head>
+        <link
+          rel="icon"
+          href="/favicon-black.png"
+          type="image/png"
+          sizes="any"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/favicon-white.png"
+          type="image/png"
+          sizes="any"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
