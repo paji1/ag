@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "Web Design & Development, SEO, and Marketing Experts",
     type: "website",
     url: "https://www.xelora.tech",
-    images: "https://www.xelora.tech/images/op-img.jpg",
+    images: "https://www.xelora.tech/images/op.jpg",
   },
 
   twitter: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     site: "@xelora",
     title: "Xelora | Web Design & Development, SEO, and Marketing Experts",
     description: "Web Design & Development, SEO, and Marketing Experts",
-    images: "https://www.xelorate.com/twitter-image.jpg",
+    images: "https://www.xelorate.com/images/twitter-image.jpg",
   },
 };
 
