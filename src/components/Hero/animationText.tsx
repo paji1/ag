@@ -30,7 +30,7 @@ const AnimationText = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
+        delayChildren: 2,
         staggerChildren: 0.2,
       },
     },
@@ -45,7 +45,7 @@ const AnimationText = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 3,
         ease: "easeOut",
       },
     },
