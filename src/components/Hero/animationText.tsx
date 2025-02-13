@@ -55,6 +55,14 @@ const AnimationText = () => {
     <>
     
           
+		<motion.h1
+            variants={itemVariants}
+          >
+				</motion.h1>
+		 <h1 className="mb-5 text-3xl font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+				Build Your Websites
+
+                </h1>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -62,16 +70,8 @@ const AnimationText = () => {
         className="relative flex flex-col z-50 w-full items-center justify-center text-center sm:px-6 md:px-8"
       >
           
-		<motion.h3
-            variants={itemVariants}
-          >
-		 <h1 className="mb-5 text-3xl font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-				Build Your Websites
-
-                </h1>
-				</motion.h3>
 			
-          <motion.h3
+          <motion.h1
             variants={itemVariants}
             className="mb-5 text-3xl flex flex-row ml-20 w-full font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight "
           >
@@ -84,11 +84,12 @@ const AnimationText = () => {
                 <Cursor cursorStyle="|" />
               </div>
             </div>
-          </motion.h3>
+          </motion.h1>
 
      
       </motion.div>
     </>
+
   );
 };
 
