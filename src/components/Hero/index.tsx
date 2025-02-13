@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnimationText from "./animationText";
 
 const Hero = () => {
   return (
@@ -12,9 +13,8 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Building Scalable and User-Centric Software Solutions
-                </h1>
+               
+				<AnimationText />
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark/[.99] sm:text-lg md:text-xl">
                 We design, develop, and deliver custom software solutions tailored to your business needs
                 </p>
@@ -37,10 +37,10 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute w-full right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
-        <video  playsInline autoPlay loop muted className="w-full">
-          <source className="fixed -z-1 h-fit"   src='/videos/intro.mp4' type="video/mp4"></source>
-
-        </video>
+		<div className="absolute inset-0 bg-black opacity-40 z-[-1]"></div>
+		<video playsInline autoPlay loop muted className="w-full bg-primary opacity-55  ">
+		  <source className="fixed -z-1 h-fit" src='/videos/intro.mp4' type="video/mp4"></source>
+		</video>
         </div>
       </section>
     </>
