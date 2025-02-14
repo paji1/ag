@@ -21,13 +21,13 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
 				  <Link
 					href="/about"
-					className="rounded-sm border-2 border-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary hover:text-white bg-primary/30"
+					className="rounded-sm border-2 border-primary px-8 py-4 text-base font-semibold text-primary dark:text-white sm:text-white duration-300 ease-in-out hover:bg-primary hover:text-white bg-primary/30"
 				  >
 					🔥 Explore Our Work
 				  </Link>
                   <Link
                     href="/contact"
-                    className="inline-block px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 bg-white/30 rounded dark:text-white dark:hover:bg-white/5"
+                    className="inline-block px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 bg-black/50 rounded dark:text-white dark:hover:bg-white/5"
                   >
                     Contact Us
                   </Link>

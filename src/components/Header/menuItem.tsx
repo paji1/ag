@@ -116,7 +116,7 @@ const MenuItem: FC<MenuItemType> = ({ sticky }) => {
 										<Link
 											href={menuItem.path}
 											className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
-												? ((usePathName === "/" && theme === "light" && !sticky) ? "text-white" : "text-primary dark:text-white")
+												? ((usePathName === "/" && theme === "light" && !sticky) ? "sm:text-white text-primary" : "text-primary dark:text-white")
 												: ((theme === "light" && usePathName === "/" && !sticky )) ? " text-dark lg:text-white/70 hover:text-white" : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
 												}`}
 										>

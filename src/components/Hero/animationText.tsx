@@ -2,12 +2,12 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const AnimationText = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
-  const occupation = "Software Engineer & Full Stack Developer";
+ 
 
   const [typewriterText] = useTypewriter({
     words: [
@@ -59,7 +59,7 @@ const AnimationText = () => {
             variants={itemVariants}
           >
 				</motion.h1>
-		 <h1 className="mb-5 text-3xl font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+		 <h1 className="mb-5 text-3xl font-bold leading-tight  text-black dark:text-white sm:text-white  sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
 				Build Your Websites
 
                 </h1>
@@ -75,9 +75,9 @@ const AnimationText = () => {
             variants={itemVariants}
             className="mb-5 text-3xl flex flex-row sm:ml-32 w-full font-bold leading-tight  text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight "
           >
-		  <span className="mr-3 hidden sm:flex">With</span>
+		  <span className="mr-3 hidden text-black dark:text-white sm:text-white  sm:flex">With</span>
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row w-full">
-			<span className="w-full flex text-center justify-center sm:hidden ">With</span>
+			<span className="w-full flex text-center text-black dark:text-white sm:text-white justify-center sm:hidden ">With</span>
 
               <div className="inline-flex  w-full items-center sm:justify-start justify-center  ">
 				<span className="animate-gradient bg-gradient-to-r from-primary via-black to-[#c8afe3] bg-[length:500%] bg-clip-text text-transparent whitespace-nowrap">
