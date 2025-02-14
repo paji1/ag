@@ -55,11 +55,8 @@ const AnimationText = () => {
     <>
     
           
-		<motion.h1
-            variants={itemVariants}
-          >
-				</motion.h1>
-		 <h1 className="mb-5 text-3xl font-bold leading-tight  text-black dark:text-white sm:text-white  sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+		
+		 <h1  className="mb-5 text-3xl font-bold leading-tight   text-black dark:text-white sm:text-white  sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
 				Build Your Websites
 
                 </h1>
