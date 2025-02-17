@@ -1,4 +1,3 @@
-"use client";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -41,13 +40,35 @@ export default function RootLayout({
         <Providers>
 			
           <Header />
+		
           {children}
           <Footer />
           <ScrollToTop />
         </Providers>
+		
+
       </body>
+	  <Script id="highleads-script" >
+        {`
+		(async function () {
+		window.__ch = { id: "20efd750-5ecd-4e7c-aa47-1e7df0d83096", url: "https://console.highleads.co" };
+		const response = await fetch("https://console.highleads.co/api/chatbot/20efd750-5ecd-4e7c-aa47-1e7df0d83096");
+		if (!response.ok) return;
+		(function () {
+		  var be = document.createElement('script');
+		  be.type = "text/javascript";
+		  be.src = '/widgets/index.js';
+		  var s = document.getElementsByTagName('script')[0];
+		  s.parentNode.insertBefore(be, s);
+		})();
+		})();
+	  `}
+      </Script>
+	  
+	  
     </html>
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers";import Script from "next/script";
+
